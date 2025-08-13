@@ -43,3 +43,24 @@
    이 API는 Provider가 AICON에서 제공하는 설계 및 포맷에 따라 개발합니다. 매월 정산 시점에 AICON이 해당 API를 호출하면, Provider는 월간 사용자별 Model 사용 이력을 AICON에 전달합니다. AICON은 이 API와 API Record Usage를 토대로 사용자 이용 요금을 산정합니다.  
    **API Format:** `/api/Provider/get-usage-for-settlement`  
    **API Design:** [API Design Get Usage For Settlement](API Design Get Usage For Settlement)
+
+
+## STEP-01
+
+<table>
+<tr>
+<td width="70%">
+
+![AICON Step 1]([https://drive.google.com/file/d/1TTQHuuheuykbiVwfnKAAudTEeSDBQIQL/view](https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/482752AXp/anh-mo-ta.png))
+<img src="[/Images/logo.svg](https://drive.google.com/file/d/1TTQHuuheuykbiVwfnKAAudTEeSDBQIQL/view)">
+</td>
+<td width="30%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
+
+**STEP-01**  
+
+1. 프로바이더로 **‘로그인’**한 후  
+2. 상단 메뉴 바의 **‘모델’** 버튼을 클릭합니다  
+
+</td>
+</tr>
+</table>
