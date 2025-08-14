@@ -231,8 +231,7 @@ API Design: [API Design Record Usage](https://docs.google.com/spreadsheets/d/1GB
 </tr>
 </table>
 
-<h1 align="center">TYPE 1 
-AICON 호스팅 프론트엔드</h1>  
+<h1 align="center">TYPE 1 AICON 호스팅 프론트엔드</h1>  
 
 ## STEP-05
 
@@ -418,7 +417,7 @@ aiConLogin: "https://aicon.or.kr/auth/login"
 </td>
 <td width="40%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
    
-**STEP-08**   
+**STEP-01**   
 
 1. **‘마이크로사이트 배포 유형’** 드롭다운 메뉴에서 **‘AICON 마이크로사이트’** 를 선택합니다.
 
@@ -435,10 +434,6 @@ aiConLogin: "https://aicon.or.kr/auth/login"
 
 </td>
 </tr>
-</table>
-
-## STEP-01
-<table>
 <tr>
 <td width="60%">
 
@@ -446,19 +441,17 @@ aiConLogin: "https://aicon.or.kr/auth/login"
 
 </td>
 <td width="40%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
-   
-**STEP-08**   
 
-1. **채팅 시작 메시지**를 입력합니다.
+6. **채팅 시작 메시지**를 입력합니다.
 
 
-2. 사용자당 모델 사용 시 업로드할 수 있는 **파일 수**를 입력합니다. (*필수)
+7. 사용자당 모델 사용 시 업로드할 수 있는 **파일 수**를 입력합니다. (*필수)
 
 
-3. 사용자당 모델 사용 시 입력할 수 있는 최대 **글자 수**를 입력합니다. (*필수)
+8. 사용자당 모델 사용 시 입력할 수 있는 최대 **글자 수**를 입력합니다. (*필수)
 
 
-4. 모델의 ***출력 유형***을 선택합니다
+9. 모델의 ***출력 유형***을 선택합니다
 
 </td>
 </tr>
@@ -474,7 +467,7 @@ aiConLogin: "https://aicon.or.kr/auth/login"
 </td>
 <td width="40%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
    
-**STEP-08**   
+**STEP-02**   
 
 1. 모델 상태 확인 API 입력 (*필수)  
    [/api/Provider/is-alive](https://dev-api.aicon.or.kr/swagger/index.html)  
@@ -491,4 +484,215 @@ aiConLogin: "https://aicon.or.kr/auth/login"
 </tr>
 </table>
 
-<h2 align="center"><a target="_blank" href="https://www.youtube.com/watch?v=7SLnUSaX3GA">📺 TYPE 2-1 - VIDEO GUIDE (채팅)</a></h2> 
+<h2 align="center"><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=IYeh-sKnXeg">📺 TYPE 2-1 - VIDEO GUIDE (채팅)</a></h2> 
+
+---
+
+<h1 align="center">TYPE 2 AICON 마이크로사이트 - 멀티 입력 타입</h1>
+
+## STEP-01
+<table>
+<tr>
+<td width="60%">
+
+![AICON](./Images/slide28.png) 
+
+</td>
+<td width="40%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
+   
+**STEP-01**   
+
+1. **‘마이크로사이트 배포 유형’** 드롭다운 메뉴에서 **‘AICON 마이크로사이트’** 를 선택합니다.
+
+
+2. 등록이 성공하면 **‘마이크로사이트 도메인’** 형식이 표시됩니다.
+
+
+3. **클라이언트 ID:** 등록된 모델의 OAuth 인증 방식을 설정하는 데 사용됩니다.
+
+
+4. **클라이언트 비밀 키:** 등록된 모델의 OAuth 인증 방식을 설정하는 데 사용됩니다.
+
+5. **모델 UI TYPE:** 멀티 입력 타입을 선택합니다. (*필수)
+
+</td>
+</tr>
+<tr>
+<td width="60%">
+
+![AICON](./Images/slide29.png) 
+
+</td>
+<td width="40%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
+
+6. **입력 UI:**
+
+- **입력 유형:** 텍스트 또는 파일를 선택합니다. (*필수)
+
+- **필수 여부:** 해당 정보 필드가 사용자 인터페이스에서 필수인지 여부를 ‘예’ 또는 ‘아니오’로 선택합니다. (*필수)
+
+- **입력 라벨:** 사용자 인터페이스에 표시될 입력 필드의 라벨을 설정합니다. (*필수)
+
+- **파라미터 이름:** API 요청에 맞게 이 필드를 설정합니다. API는 AICON의 형식과 설계에 따라야 하며, 예시는  
+  [/api/Provider/chat-multi-input](https://dev-api.aicon.or.kr/swagger/index.html)  
+  (*필수)
+
+</td>
+</tr>
+<tr>
+<td width="60%">
+
+![AICON](./Images/alisw30.png) 
+
+</td>
+<td width="40%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
+
+7. **출력 UI:**
+
+- **출력 유형:** 텍스트, 파일, 이미지 중 선택합니다. (*필수)
+
+- **출력 라벨:** 사용자 인터페이스에 표시될 출력 필드의 라벨을 설정합니다. (*필수)
+
+- **파라미터 이름:** API 응답에 맞게 이 필드를 설정합니다. API는 AICON의 형식과 설계에 따라야 하며, 예시는
+  [/api/Provider/chat-multi-input](https://dev-api.aicon.or.kr/swagger/index.html)
+
+</td>
+</tr>
+</table>
+
+## STEP-02
+<table>
+<tr>
+<td width="60%">
+
+![AICON](./Images/slide31.png) 
+
+</td>
+<td width="40%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
+   
+**STEP-02**   
+
+1. 모델 상태 확인 API 입력 (*필수)  
+   [/api/Provider/is-alive](https://dev-api.aicon.or.kr/swagger/index.html)  
+
+2. 월별 정산 API 입력  (*필수)  
+   [/api/Provider/get-usage-for-settlement](https://dev-api.aicon.or.kr/swagger/index.html)
+
+3. 모델 실행 API 입력  (*필수)
+   [/api/Provider/chat-multi-input](https://dev-api.aicon.or.kr/swagger/index.html)
+
+4. **‘제출’** 버튼을 클릭하여 관리자의 승인을 기다립니다.
+
+</td>
+</tr>
+</table>
+
+<h2 align="center"><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=j5Yc-Z7Mcvk">📺 TYPE 2-1 - VIDEO GUIDE (멀티 입력)</a></h2> 
+
+---
+
+<h1 align="center">TYPE 3 OAuth 또는 API Key를 사용한 모델</h1>  
+
+## STEP-01
+<table>
+<tr>
+<td width="60%">
+
+![AICON](./Images/slide34.png) 
+
+</td>
+<td width="40%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
+   
+**STEP-01**   
+
+1. **‘마이크로사이트 배포 유형’** 드롭다운 메뉴에서 **‘OAuth 또는 API Key를 사용한 모델’** 을 선택합니다.
+
+2. 마이크로사이트의 URL을 입력합니다. (*필수)
+
+3. **클라이언트 ID:** 등록된 모델의 OAuth 인증 방식을 설정하는 데 사용됩니다.
+
+4. **클라이언트 비밀 키:** 등록된 모델의 OAuth 인증 방식을 설정하는 데 사용됩니다.
+
+</td>
+</tr>
+</table>
+
+## STEP-02
+<table>
+<tr>
+<td width="60%">
+
+![AICON](./Images/slide35.png) 
+
+</td>
+<td width="40%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
+   
+**STEP-02**   
+
+1. 모델 상태 확인 API 입력 (*필수)
+   [/api/Provider/is-alive](https://dev-api.aicon.or.kr/swagger/index.html)
+
+2. 월별 정산 API 입력  (*필수)
+   [/api/Provider/get-usage-for-settlement](https://dev-api.aicon.or.kr/swagger/index.html)
+
+3. **‘제출’** 버튼을 클릭하여 관리자의 승인을 기다립니다.
+
+</td>
+</tr>
+</table>
+
+<h2 align="center"><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=2N9FOmNFkYE">📺 TYPE 3 - VIDEO GUIDE</a></h2>
+
+---
+
+<h1 align="center">TYPE 4 아웃링크</h1>
+
+## STEP-01
+<table>
+<tr>
+<td width="60%">
+
+![AICON](./Images/slide38.png) 
+
+</td>
+<td width="40%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
+   
+**STEP-01**   
+
+1. **‘마이크로사이트 배포 유형’** 드롭다운 메뉴에서 **‘아웃링크’** 를 선택합니다.
+
+2. 마이크로사이트의 URL을 입력합니다. (*필수)
+
+3. **클라이언트 ID:** 등록된 모델의 OAuth 인증 방식을 설정하는 데 사용됩니다.
+
+4. **클라이언트 비밀 키:** 등록된 모델의 OAuth 인증 방식을 설정하는 데 사용됩니다.
+
+</td>
+</tr>
+</table>
+
+## STEP-02
+<table>
+<tr>
+<td width="60%">
+
+![AICON](./Images/slide39.png) 
+
+</td>
+<td width="40%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
+   
+**STEP-02**   
+
+1. 모델 상태 확인 API 입력 (*필수)
+   [/api/Provider/is-alive](https://dev-api.aicon.or.kr/swagger/index.html)
+
+2. 월별 정산 API 입력  (*필수)
+   [/api/Provider/get-usage-for-settlement](https://dev-api.aicon.or.kr/swagger/index.html)
+
+3. **‘제출’** 버튼을 클릭하여 관리자의 승인을 기다립니다.
+
+</td>
+</tr>
+</table>
+
+<h2 align="center"><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=ogdqd3lClng">📺 TYPE 4 - VIDEO GUIDE</a></h2>
