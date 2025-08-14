@@ -238,13 +238,12 @@ AICON 호스팅 프론트엔드</h1>
 
 <table>
 <tr>
-<td width="60%">
+<td width="70%">
 
-API Format: [/api/Provider/record-usage](https://dev-api.aicon.or.kr/swagger/index.html)  
-API Design: [API Design Record Usage](https://docs.google.com/spreadsheets/d/1GB-fm4F-AjZxavDDTdJJ2j-DbilcBPixCLgoX-2bcIg/edit?gid=506055246#gid=506055246)  
+![AICON](./Images/slide14.png) 
 
 </td>
-<td width="40%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
+<td width="30%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
    
 **STEP-05**  
 
@@ -260,3 +259,236 @@ API Design: [API Design Record Usage](https://docs.google.com/spreadsheets/d/1GB
 </td>
 </tr>
 </table>
+
+## STEP-06-1
+
+<table>
+<tr>
+<td width="60%">
+
+![AICON](./Images/slide15.png) 
+
+</td>
+<td width="40%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
+   
+**STEP-06-1**  
+**Blazor 샘플 소스 코드 설정**  
+
+1. 다음 경로로 접근합니다: blazor-chatbot\appsettings.json  
+
+2. 해당 소스 코드 설정을 귀하의 모델에 맞게 변경합니다.  
+  
+// Provider's AI chatbot API  
+apiEndPoint: "",  
+// API endpoint for AICON  
+aiConApiEndpoint: "https://api.aicon.or.kr/api",  
+// Client ID for authentication that provided when provider registers an AI model  
+clientID: "", // from S-05  
+// Client secret for authentication that provided when registers an AI model  
+clientSecret: "", // from S-05  
+// Grant type for authentication  
+authenGrantType: "authorization_code",  
+// Grant type for refreshing the token  
+refreshGrantType: "refresh_token",  
+// Login page URL for AICON  
+aiConLogin: "https://aicon.or.kr/auth/login"  
+
+</td>
+</tr>
+</table>
+
+## Example Config File Blazor:  
+
+```json
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "DomainSettings": {
+    "apiEndPoint": "https://api-pro-kab-chatbot.ominext.dev",
+    "aiconApiEndpoint": "https://api.aicon.or.kr/api",
+    "clientID": "MjAyNTA3MTExMDA4MzhfZTI4NWQ2NDllZjc2NDQxZjg4MWQzYTFhNTAwMmZiMDA=",
+    "clientSecret": "pMrZJAJc31+RdcbNAKPtHusiba2RggVTYI+aRkm1AlF6XqQrJ90f6adPu+bAYvR4",
+    "authenGrantType": "authorization_code",
+    "refreshGrantType": "refresh_token",
+    "aiconLogin": "https://aicon.or.kr/auth/login"
+  }
+}
+
+```
+
+## STEP-07-1
+
+**Blazor 소스 코드 빌드하기**  
+
+<h2 align="center"><a href="https://www.youtube.com/watch?v=WLASXqxzXj4">📺 TYPE 1-1 - VIDEO GUIDE (for Blazor)</a></h2>
+
+## STEP-06-2
+
+<table>
+<tr>
+<td width="60%">
+
+![AICON](./Images/slide18.png) 
+
+</td>
+<td width="40%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
+   
+**STEP-06-2**  
+**Angular 샘플 소스 코드 설정**  
+
+1. 다음 경로로 접근합니다: \angular-chatbot\src\assets\configs\configs.json  
+
+2. 해당 소스 코드 설정을 귀하의 모델에 맞게 변경합니다.  
+  
+// Provider's AI chatbot API  
+apiEndPoint: "",  
+// API endpoint for AICON  
+aiConApiEndpoint: "https://api.aicon.or.kr/api",  
+// Client ID for authentication that provided when provider registers an AI model  
+clientID: "", // from S-05  
+// Client secret for authentication that provided when registers an AI model  
+clientSecret: "", // from S-05  
+// Grant type for authentication  
+authenGrantType: "authorization_code",  
+// Grant type for refreshing the token  
+refreshGrantType: "refresh_token",  
+// Login page URL for AICON  
+aiConLogin: "https://aicon.or.kr/auth/login"  
+</td>
+</tr>
+</table>
+
+## Example Config File:
+
+```json
+{
+    "apiEndPoint": "https://api-pro-kab-chatbot.ominext.dev",
+    "aiConApiEndpoint": "https://api.aicon.or.kr/api",
+    "clientID": "",
+    "clientSecret": "",
+    "authenGrantType": "authorization_code",
+    "refreshGrantType": "refresh_token",
+    "aiConLogin": "https://aicon.or.kr/auth/login"
+}
+```
+
+## STEP-07-2
+
+**Angular 소스 코드 빌드하기**  
+
+<h2 align="center"><a href="https://www.youtube.com/watch?v=7SLnUSaX3GA">📺 TYPE 1-2 - VIDEO GUIDE (for Angular)</a></h2> 
+
+## STEP-08
+<table>
+<tr>
+<td width="60%">
+
+![AICON](./Images/slide21.png) 
+
+</td>
+<td width="40%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
+   
+**STEP-08**   
+
+1. 모델 상태 확인 API 입력 (*필수)  
+   [/api/Provider/is-alive](https://dev-api.aicon.or.kr/swagger/index.html)  
+
+2. 월별 정산 API 입력  (*필수)  
+   [/api/Provider/get-usage-for-settlement](https://dev-api.aicon.or.kr/swagger/index.html)
+
+3. **‘제출’** 버튼을 클릭하여 관리자의 승인을 기다립니다.
+
+</td>
+</tr>
+</table>
+
+<h1 align="center">TYPE 2 AICON 마이크로사이트 - 채팅 타입</h1>
+
+## STEP-01
+<table>
+<tr>
+<td width="60%">
+
+![AICON](./Images/slide23.png) 
+
+</td>
+<td width="40%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
+   
+**STEP-08**   
+
+1. **‘마이크로사이트 배포 유형’** 드롭다운 메뉴에서 **‘AICON 마이크로사이트’** 를 선택합니다.
+
+
+2. 등록이 성공하면 **‘마이크로사이트 도메인’** 형식이 표시됩니다.
+
+
+3. **클라이언트 ID:** 등록된 모델의 OAuth 인증 방식을 설정하는 데 사용됩니다.
+
+
+4. **클라이언트 비밀 키:** 등록된 모델의 OAuth 인증 방식을 설정하는 데 사용됩니다.
+
+5. **모델 UI TYPE:** 채팅 타입을 선택합니다. (*필수)
+
+</td>
+</tr>
+</table>
+
+## STEP-01
+<table>
+<tr>
+<td width="60%">
+
+![AICON](./Images/slide24.png) 
+
+</td>
+<td width="40%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
+   
+**STEP-08**   
+
+1. **채팅 시작 메시지**를 입력합니다.
+
+
+2. 사용자당 모델 사용 시 업로드할 수 있는 **파일 수**를 입력합니다. (*필수)
+
+
+3. 사용자당 모델 사용 시 입력할 수 있는 최대 **글자 수**를 입력합니다. (*필수)
+
+
+4. 모델의 ***출력 유형***을 선택합니다
+
+</td>
+</tr>
+</table>
+
+## STEP-02
+<table>
+<tr>
+<td width="60%">
+
+![AICON](./Images/slide25.png) 
+
+</td>
+<td width="40%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
+   
+**STEP-08**   
+
+1. 모델 상태 확인 API 입력 (*필수)  
+   [/api/Provider/is-alive](https://dev-api.aicon.or.kr/swagger/index.html)  
+
+2. 월별 정산 API 입력  (*필수)  
+   [/api/Provider/get-usage-for-settlement](https://dev-api.aicon.or.kr/swagger/index.html)
+
+3. 모델 실행 API 입력 (*필수)
+   [/api/Provider/chatting-type](https://dev-api.aicon.or.kr/swagger/index.html)
+
+4. **‘제출’** 버튼을 클릭하여 관리자의 승인을 기다립니다.
+
+</td>
+</tr>
+</table>
+
+<h2 align="center"><a target="_blank" href="https://www.youtube.com/watch?v=7SLnUSaX3GA">📺 TYPE 2-1 - VIDEO GUIDE (채팅)</a></h2> 
