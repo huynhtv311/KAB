@@ -56,6 +56,7 @@
 ![AICON Step 1](./Images/ImageSlide6.png)
 </td>
 <td width="30%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
+   
 **STEP-01**  
 
 1. 프로바이더로 **‘로그인’** 한 후  
@@ -71,14 +72,191 @@
 <tr>
 <td width="70%">
 
-![AICON Step 1](./Images/ImageSlide6.png)
+![AICON Step 1](./Images/ImageSlide7.png)
 </td>
 <td width="30%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
-**STEP-01**  
+   
+**STEP-02**  
 
-1. 프로바이더로 **‘로그인’** 한 후  
-2. 상단 메뉴 바의 **‘모델’** 버튼을 클릭합니다  
+1. 왼쪽 메뉴 바의 **‘사용 관리’** 에서  
+2. **‘모델 관리’** 메뉴를 선택합니다.  
 
+</td>
+</tr>
+</table>
+
+## STEP-03
+
+<table>
+<tr>
+<td width="70%">
+
+![AICON Step 1](./Images/ImageSlide8.png)
+</td>
+<td width="30%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
+   
+**STEP-03**  
+
+1. **‘모델 관리’** 화면에서 에서  
+2. **‘모델 추가’** 버튼을 클릭합니다.  
+
+</td>
+</tr>
+</table>
+
+## STEP-04
+
+<table>
+<tr>
+<td width="70%">
+
+![AICON Step 1](./Images/slide9.png)
+</td>
+<td width="30%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
+   
+**STEP-04**  
+
+1. 순서대로 모델 ‘정보’ 입력 <span style="color:red">(*필수)</span>  
+2. 모델 **‘가이드라인’** 정보 입력 <span style="color:red">(*선택)</span>
+3. **‘마이크로사이트 배포 유형’** 및 구성 정보를 선택합니다.
+4. 모델의 **샘플 소스 코드 다운로드** - Blazor 및 Angular <span style="color:red"> (*Type 1에만 한함) </span>
+
+</td>
+</tr>
+</table>
+
+## Blazor 소스 코드 구조
+
+<table>
+<tr>
+<td width="30%">
+
+![AICON Step 1](./Images/slide10.png)
+</td>
+<td width="70%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
+   
+**Blazor 소스 코드 구조**  
+
+1. **Connected Services:** 외부 서비스 추가 위치 (예: Azure Storage, WCF, gRPC 등)
+
+2. **Dependencies**  
+   a. **Analyzers**: 컴파일 과정에서 코드 자동 검사 도구 저장 위치  
+   b. **Framework**: 사용 중인 .NET 프레임워크 정보 (프로젝트가 실행되는 플랫폼)  
+   c. **Packages**: 코드 작성 시 추가한 NuGet 패키지 저장 위치  
+   d. **Properties**: 애플리케이션 실행 시 설정(툴, URL, 실행 환경 등)
+
+3. **wwwroot**  
+   a. **images**: 프로젝트 내 이미지 파일 저장 위치  
+   b. **js**: Blazor에서 JS interop을 통해 호출하는 JavaScript 파일 저장 위치  
+   c. **app.css**: 애플리케이션 전체 스타일을 위한 CSS 파일
+
+4. **Common:** 프로젝트 전반에서 공통으로 사용하는 클래스 및 함수 파일
+
+5. **Components:** UI 코드 파일 저장 위치
+
+6. **Models:** 데이터 구조를 설명하는 클래스 파일 저장 위치
+
+7. **Service:** 비즈니스 로직 처리 및 API 호출을 담당하는 서비스 로직 파일 저장 위치
+
+8. **.gitignore:** Git에서 소스 관리 제외할 파일 및 폴더 지정 파일
+
+9. **appsettings.json:** 애플리케이션 주요 설정 파일로, API URL, API Key, ClientID, Client Secret 등을 저장
+
+10. **Program.cs**  
+    Blazor Server 애플리케이션의 시작점  
+    a. 웹 호스트 생성 및 설정  
+    b. 필요한 서비스 등록(DI)  
+    c. 미들웨어 및 라우팅 설정  
+    d. 애플리케이션 실행
+      
+이 구조를 참고하시면 Blazor 프로젝트의 전체적인 구성과 역할을 이해하는 데 도움이 될 것입니다.  
+</td>
+</tr>
+</table>
+
+## Angular 소스 코드 구조
+
+<table>
+<tr>
+<td width="30%">
+
+![AICON Step 1](./Images/slide11.png)
+</td>
+<td width="70%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
+   
+**Angular 소스 코드 구조**  
+
+1. **public**: 이미지, favicon, JSON 파일, HTML, CSS, JS 등 빌드 도구의 처리 없이 사용하는 정적 파일 저장 위  
+2. **src**: 메인 소스 코드가 위치한 폴더  
+3. **app**: 주요 소스 코드 폴더  
+   a. **core**: 애플리케이션의 공통 로직 및 핵심 기능 저장  
+   b. **dto**: 데이터 타입 선언 저장  
+   c. **layout**: 애플리케이션 레이아웃 및 UI 구성  
+   d. **pages**: 애플리케이션 내 개별 페이지  
+   e. **services**: 비즈니스 로직 및 API 호출 처리  
+4. **assets**: 이미지, 폰트, JSON 등 컴파일 없이 직접 사용하는 정적 자원 저장  
+   a. **configs**: 애플리케이션의 주요 설정 파일(API URL, API Key, ClientID, Client Secret 등)  
+   b. **image**: 애플리케이션 내 이미지 저장  
+5. **favicon.ico**: 웹사이트 아이콘 파일(브라우저 탭 및 즐겨찾기 표시)  
+6. **index.html**: Angular 애플리케이션의 진입점 HTML 파일  
+7. **main.ts**: 애플리케이션을 시작하는 TypeScript 파일  
+8. **styles.scss**: 애플리케이션 전역 스타일 시트  
+9. **Web.config**: IIS 서버용 설정 파일  
+10. **.gitignore**: Git 커밋 시 제외할 파일 및 폴더 지정
+      
+기타 파일들은 프로젝트 초기화 시 기본 생성되는 파일들입니다. 이 구조를 참고하시면 Angular 프로젝트의 전반적인 구성과 역할을 이해하는 데 도움이 될 것입니다.  
+</td>
+</tr>
+</table>
+
+## [공통] 타입 1 - 4
+
+<table>
+<tr>
+<td width="60%">
+
+API Format: [/api/Provider/record-usage](https://dev-api.aicon.or.kr/swagger/index.html)  
+API Design: [API Design Record Usage](https://docs.google.com/spreadsheets/d/1GB-fm4F-AjZxavDDTdJJ2j-DbilcBPixCLgoX-2bcIg/edit?gid=506055246#gid=506055246)  
+
+</td>
+<td width="40%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
+   
+**[공통] 타입 1 - 4**  
+
+프로바이더는 반드시 AICON에서 개발한 **Record Usage API(사용내역 기록)** 를 사용자가 모델을 사용할때마다 호출해야 하며, 자사 AI 모델과 연동하는 책임이 있습니다. 해당 API의 주요 목적은 다음과 같습니다:  
+1. 프로바이더는 사용자의 모델 사용 내역을 사용 단위별로 AICON에 전달합니다.  
+2. 사용자는 이 API를 통해 본인의 사용 비용을 실시간으로 확인할 수 있습니다.  
+3. 또한, **record-usage API** 와 **get-usage-for-settlement API**는 모델 사용료 정산에 사용 됩니다  
+</td>
+</tr>
+</table>
+
+<h1 align="center">TYPE 1 
+AICON 호스팅 프론트엔드</h1>  
+
+## STEP-05
+
+<table>
+<tr>
+<td width="60%">
+
+API Format: [/api/Provider/record-usage](https://dev-api.aicon.or.kr/swagger/index.html)  
+API Design: [API Design Record Usage](https://docs.google.com/spreadsheets/d/1GB-fm4F-AjZxavDDTdJJ2j-DbilcBPixCLgoX-2bcIg/edit?gid=506055246#gid=506055246)  
+
+</td>
+<td width="40%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
+   
+**STEP-05**  
+
+1. **‘마이크로사이트 배포 유형’** 드롭다운 메뉴에서 **‘AICON 호스팅 프론트엔드’** 를 선택합니다.
+
+2. 등록이 성공하면 **‘마이크로사이트 도메인’** 형식이 표시됩니다.
+
+3. **클라이언트 ID:** 등록된 모델의 OAuth 인증 방식을 설정하는 데 사용됩니다.
+
+4. **클라이언트 비밀 키:** 등록된 모델의 OAuth 인증 방식을 설정하는 데 사용됩니다.
+
+5. **프론트엔드 업로드:** 프로바이더가 빌드한 파일을 업로드합니다. 
 </td>
 </tr>
 </table>
