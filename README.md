@@ -1,3 +1,5 @@
+<h1 align="center">가이드라인 개요</h1>
+
 ## 1.1. 가이드라인 최종 목표
 
 이 가이드를 숙지함으로써 공급자는 AICON 플랫폼과 원활하게 연동하기 위해 반드시 구현 및 연동해야 하는 다양한 모델 등록 타입과 주요 API(Record Usage, Check Alive, Get Usage For Settlement)에 대한 요건을 정확히 이해할 수 있습니다.
@@ -31,18 +33,18 @@
 
 1. **API Record Usage**  
    이 API는 AICON에서 개발하며, Provider는 사용자가 Model을 이용할 때마다 해당 사용 이력을 AICON에 전송하도록 이 API를 반드시 연동해야 합니다.  
-   **API Format:** `/api/Provider/record-usage`  
-   **API Design:** [API Design Record Usage](API Design Record Usage)
+   **API Format:** [/api/Provider/record-usage](https://api.aicon.or.kr/swagger/index.html)  
+   **API Design:** [API Design Record Usage](https://docs.google.com/spreadsheets/d/1GB-fm4F-AjZxavDDTdJJ2j-DbilcBPixCLgoX-2bcIg/edit?gid=506055246#gid=506055246)  
 
 2. **API Check Alive**  
    이 API는 Provider가 AICON에서 제공하는 설계 및 포맷에 따라 개발합니다. 사용자가 Model 상세 페이지에서 "Run Model" 버튼을 클릭하면, AICON이 이 API를 호출하여 Model이 정상적으로 운영 중인지 확인합니다.  
-   **API Format:** `/api/Provider/is-alive`  
-   **API Design:** [API Design Check Alive](API Design Check Alive)
+   **API Format:** [/api/Provider/is-alive](https://api.aicon.or.kr/swagger/index.html)  
+   **API Design:** [API Design Check Alive](https://docs.google.com/spreadsheets/d/1GB-fm4F-AjZxavDDTdJJ2j-DbilcBPixCLgoX-2bcIg/edit?gid=281968065#gid=281968065)  
 
 3. **API Get Usage For Settlement**  
    이 API는 Provider가 AICON에서 제공하는 설계 및 포맷에 따라 개발합니다. 매월 정산 시점에 AICON이 해당 API를 호출하면, Provider는 월간 사용자별 Model 사용 이력을 AICON에 전달합니다. AICON은 이 API와 API Record Usage를 토대로 사용자 이용 요금을 산정합니다.  
-   **API Format:** `/api/Provider/get-usage-for-settlement`  
-   **API Design:** [API Design Get Usage For Settlement](API Design Get Usage For Settlement)
+   **API Format:** [/api/Provider/get-usage-for-settlement](https://api.aicon.or.kr/swagger/index.html)  
+   **API Design:** [API Design Get Usage For Settlement](https://docs.google.com/spreadsheets/d/1GB-fm4F-AjZxavDDTdJJ2j-DbilcBPixCLgoX-2bcIg/edit?gid=543050747#gid=543050747)  
 
 
 ## STEP-01
@@ -51,12 +53,30 @@
 <tr>
 <td width="70%">
 
-![AICON Step 1](./Images/Screenshot_1.png)
+![AICON Step 1](./Images/ImageSlide6.png)
 </td>
 <td width="30%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
 **STEP-01**  
 
-1. 프로바이더로 **‘로그인’**한 후  
+1. 프로바이더로 **‘로그인’** 한 후  
+2. 상단 메뉴 바의 **‘모델’** 버튼을 클릭합니다  
+
+</td>
+</tr>
+</table>
+
+## STEP-02
+
+<table>
+<tr>
+<td width="70%">
+
+![AICON Step 1](./Images/ImageSlide6.png)
+</td>
+<td width="30%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
+**STEP-01**  
+
+1. 프로바이더로 **‘로그인’** 한 후  
 2. 상단 메뉴 바의 **‘모델’** 버튼을 클릭합니다  
 
 </td>
