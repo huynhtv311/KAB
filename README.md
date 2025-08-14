@@ -51,11 +51,9 @@
 <tr>
 <td width="70%">
 
-![AICON Step 1]([https://drive.google.com/file/d/1TTQHuuheuykbiVwfnKAAudTEeSDBQIQL/view](https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/482752AXp/anh-mo-ta.png))
-<img src="[/Images/logo.svg](https://drive.google.com/file/d/1TTQHuuheuykbiVwfnKAAudTEeSDBQIQL/view)">
+![AICON Step 1](./Images/Screenshot_1.png)
 </td>
 <td width="30%" valign="top" style="background-color:#f2f2f2; padding:15px; border-radius:10px;">
-
 **STEP-01**  
 
 1. 프로바이더로 **‘로그인’**한 후  
